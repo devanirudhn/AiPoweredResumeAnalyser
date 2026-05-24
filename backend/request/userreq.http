@@ -1,0 +1,55 @@
+###register
+POST http://localhost:3000/userapi/users
+Content-Type: application/json
+
+{
+  "firstname": "Anirudh",
+  "lastname": "Neelarapu",
+  "email": "ani@gmail.com",
+  "password": "123456"
+}
+
+###login
+POST http://localhost:3000/userapi/login
+Content-Type: application/json
+
+{
+    "email":"ani@gmail.com",
+    "password":"123456"
+
+}
+
+
+### Upload Resume
+
+POST http://localhost:3000/resume/upload
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTAxOTUxZjE0NmIwZGMwMTZlMTJhOWEiLCJlbWFpbCI6ImFuaUBnbWFpbC5jb20iLCJpYXQiOjE3Nzg0ODg2MTIsImV4cCI6MTc3OTA5MzQxMn0.cTJ2ReMNL6qGBwlXQjD9iMUttZJeO_fwlAMcid8q9Gw
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+
+--MyBoundary
+Content-Disposition: form-data; name="role"
+
+frontend
+
+
+--MyBoundary
+Content-Disposition: form-data; name="resume"; filename="ANIRUDH_NEELARAPU_improved.pdf"
+Content-Type: application/pdf
+
+< D:/nana/ANIRUDH_NEELARAPU_improved.pdf
+
+
+--MyBoundary--
+###
+GET http://localhost:3000/resume/history
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTAxOTUxZjE0NmIwZGMwMTZlMTJhOWEiLCJlbWFpbCI6ImFuaUBnbWFpbC5jb20iLCJpYXQiOjE3Nzg0ODg2MTIsImV4cCI6MTc3OTA5MzQxMn0.cTJ2ReMNL6qGBwlXQjD9iMUttZJeO_fwlAMcid8q9Gw
+###
+DELETE http://localhost:3000/resume 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTAxOTUxZjE0NmIwZGMwMTZlMTJhOWEiLCJlbWFpbCI6ImFuaUBnbWFpbC5jb20iLCJpYXQiOjE3Nzg0ODg2MTIsImV4cCI6MTc3OTA5MzQxMn0.cTJ2ReMNL6qGBwlXQjD9iMUttZJeO_fwlAMcid8q9Gw
+
+
+###delete reusme by id
+
+DELETE  http://localhost:3000/resume/6a01956f146b0dc016e12a9b
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTAxOTUxZjE0NmIwZGMwMTZlMTJhOWEiLCJlbWFpbCI6ImFuaUBnbWFpbC5jb20iLCJpYXQiOjE3Nzg0ODg2MTIsImV4cCI6MTc3OTA5MzQxMn0.cTJ2ReMNL6qGBwlXQjD9iMUttZJeO_fwlAMcid8q9Gw

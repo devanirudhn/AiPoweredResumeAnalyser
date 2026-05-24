@@ -1,0 +1,35 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "bcryptjs": "^3.0.3",
+    "cloudinary": "^2.10.0",
+    "cookie-parser": "^1.4.7",
+    "cookieparser": "^0.1.0",
+    "cors": "^2.8.6",
+    "docx": "^9.6.1",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^8.5.2",
+    "fs": "^0.0.1-security",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.6.1",
+    "multer": "^2.1.1",
+    "openai": "^6.36.0",
+    "path": "^0.12.7",
+    "pdf-parse-fixed": "^1.1.1",
+    "pdfkit": "^0.18.0"
+  }
+}
